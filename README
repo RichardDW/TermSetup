@@ -3,3 +3,5 @@ wget https://github.com/seebi/dircolors-solarized/archive/master.zip
 
 Copy one of the dircolors file to ~/.dircolors
 
+To adjust the putty settings in Windows import the settings with
+a registry file
