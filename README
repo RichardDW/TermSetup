@@ -1,7 +1,12 @@
 # Copy the DIRCOLORS from the web
 wget https://github.com/seebi/dircolors-solarized/archive/master.zip
-
 Copy one of the dircolors file to ~/.dircolors
 
+
+Fonts
+https://github.com/adobe-fonts/source-code-pro
+https://github.com/gabrielelana/awesome-terminal-fonts
+
+Putty
 To adjust the putty settings in Windows import the settings with
 a registry file
