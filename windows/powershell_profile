@@ -1,0 +1,23 @@
+# from CMD: winget install JanDeDobbeleer.OhMyPosh
+# In an elevated powerhell terminal add exception to Defender:
+# PS1> Add-MpPreference -ExclusionProcess oh-my-posh.exe
+
+# Install a Nerd Font
+# install PSCOLORS
+PS1> Install-Module PSColors -Scope CurrentUser -AllowClobber
+
+# Put in $PROFILE of powershell (notepad $PROFILE):
+Import-Module posh-git
+Import-Module oh-my-posh
+Import-Module PSColors
+Set-Theme Paradox
+oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\blueish2.omp.json | Invoke-Expression
+if ($host.Name -eq 'ConsoleHost')
+{
+    Import-Module PSReadLine
+}
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -EditMode Windows
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
